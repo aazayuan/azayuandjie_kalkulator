@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 6_Kalkulator Keren</title>
+    <!-- Jelaskan Kodingan ini apa --> 
+    <script src="https://cdn.tailwindcss.com"></script> <!--kode untuk memanggil Tailwind CSS melalui CDN, sehingga Tailwind dapat digunakan secara langsung tanpa harus meninstall apapun.-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <!--kode untuk mengimport font Inter dari google font dengan ketebalan 400, 500, dan 700.-->
+    <link href="style.css" rel="stylesheet"> <!--kode untuk memanggil file css di folder yang sama untuk memberikan style pada website.-->
+</head>
+<body class="bg-pink-600 text-white min-h-screen flex items-center justify-center p-4"> <!--kode untuk mengatur latar belakang menjadi abu-abu dengan teks putih, menjadikan elemen sebagai flex container yang posisinya 
+    di tengah layar dengan tinggi minimum setinggi layar, serta memberikan padding 16px di semua sisi.-->
+
+    <div class="w-full max-w-sm bg-pink-400 rounded-2xl shadow-2xl p-6 space-y-4"> <!--kode untuk mengatur kalkulator yang merupakan container kecil berwarna pink tua, memiliki padding, 
+        bersudut bulat, dan memiliki bayangan tebal dengan spasi antar isi elemen di dalamnya.-->
+        
+        <!-- Jelaskan Kodingan ini apa -->
+        <div>
+            <img id="Name" 
+                 src="https://placehold.co/400x50/DB2777/E5E7EB?text=Almira Azaria Yuandjie 1710624055"
+                 class="w-full rounded-lg shadow-inner"> <!--kode yang digunakan untuk mengambil gambar placeholder untuk nama dari website placehold.co yang berukuran 400 x 50 
+                 dan teks "Almira Azaria Yuandjie 1710624055" dengan lebar gambar mengikuti lebar container, memiliki sudut melengkung, dan memiliki bayangan di dalam.-->
+        </div>
+        <div>
+            <img id="statusImage" 
+                 src="https://placehold.co/400x100/DB2777/E5E7EB?text=Kalkulator" 
+                 alt="Status Kalkulator"
+                 class="w-full rounded-lg transition-all duration-300 ease-in-out shadow-inner"> <!--kode yang digunakan untuk mengambil gambar placeholder untuk nama dari website placehold.co yang berukuran 400 x 50 dan teks "Kalkulator" 
+                 dengan teks alternatif "Status Kalkulator" yang muncul untuk menunjukkan status perhitungan akhir kalkulator. Dengan "class" yang berfungsi untuk memberikan style pada gambar.-->
+        </div>
+
+        <!-- Jelaskan Kodingan ini apa -->
+        <div class="bg-pink-300 rounded-lg p-4 shadow-inner">
+            <input type="text" id="display" 
+                   class="w-full bg-transparent text-right text-5xl font-mono text-white border-0 outline-none p-2" 
+                   readonly 
+                   placeholder="0"> <!--kode untuk mengatur layar kalkulator menjadi berwarna pink dengan border lengkung dan angka 0 berwarna putih disebelah kanan. 
+                   Selain itu, diatur juga untuk pengisian hanya dengan memencet tombol bukan diketik secara langsung.-->
+        </div>
+
+        <!-- Jelaskan Kodingan ini apa -->
+        <div class="grid grid-cols-4 gap-3"> <!--kode untuk mengatur susunan tombol menjadi dalam 4 kolom dengan spacing sebesar 3 unit.-->
+            <!-- Jelaskan Kodingan ini apa --> <!--kode untuk mengatur tombol-tombol kalkulator dengan mengatur value data tombol dan juga tampilannya.-->
+            <button data-value="C" class="btn-calc text-2xl font-bold bg-pink-700 hover:bg-pink-600 rounded-lg p-5 shadow-md text-white">C</button>
+            <button data-value="DEL" class="btn-calc text-2xl font-bold bg-pink-600 hover:bg-pink-500 rounded-lg p-5 shadow-md text-white">DEL</button>
+            <button data-value="%" class="btn-calc text-2xl font-bold bg-pink-600 hover:bg-pink-500 rounded-lg p-5 shadow-md text-white">%</button>
+            <button data-value="/" class="btn-calc text-2xl font-bold bg-pink-600 hover:bg-pink-500 rounded-lg p-5 shadow-md text-white">/</button>
+
+            <!--  Jelaskan Kodingan ini apa  --> <!--kode untuk mengatur tombol-tombol kalkulator dengan mengatur value data tombol dan juga tampilannya.-->
+            <button data-value="7" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">7</button>
+            <button data-value="8" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">8</button>
+            <button data-value="9" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">9</button>
+            <button data-value="*" class="btn-calc text-2xl font-bold bg-pink-600 hover:bg-pink-500 rounded-lg p-5 shadow-md text-white">*</button>
+
+            <!--  Jelaskan Kodingan ini apa  --> <!--kode untuk mengatur tombol-tombol kalkulator dengan mengatur value data tombol dan juga tampilannya.-->
+            <button data-value="4" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">4</button>
+            <button data-value="5" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">5</button>
+            <button data-value="6" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">6</button>
+            <button data-value="-" class="btn-calc text-2xl font-bold bg-pink-600 hover:bg-pink-500 rounded-lg p-5 shadow-md text-white">-</button>
+
+            <!--  Jelaskan Kodingan ini apa  --> <!--kode untuk mengatur tombol-tombol kalkulator dengan mengatur value data tombol dan juga tampilannya.-->
+            <button data-value="1" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">1</button>
+            <button data-value="2" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">2</button>
+            <button data-value="3" class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">3</button>
+            <button data-value="+" class="btn-calc text-2xl font-bold bg-pink-600 hover:bg-pink-500 rounded-lg p-5 shadow-md text-white">+</button>
+
+            <!--  Jelaskan Kodingan ini apa  --> <!--kode untuk mengatur tombol-tombol kalkulator dengan mengatur value data tombol dan juga tampilannya.-->
+            <button data-value="0" class="btn-calc col-span-2 text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">0</button>
+            <button data-value="." class="btn-calc text-2xl font-bold bg-pink-300 hover:bg-pink-200 rounded-lg p-5 shadow-md text-white">.</button>
+            <button data-value="=" class="btn-calc text-2xl font-bold bg-pink-700 hover:bg-pink-600 rounded-lg p-5 shadow-md text-white">=</button>
+        </div>
+
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
